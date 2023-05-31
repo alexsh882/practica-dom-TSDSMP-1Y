@@ -20,7 +20,7 @@ const realizarCalculo = () => {
       break;
 
     default:
-      resultado.innerText = "";
+      resultado.innerText = "No se seleccionó ningún tipo de operación";
       break;
   }
 };
