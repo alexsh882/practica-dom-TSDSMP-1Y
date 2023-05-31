@@ -15,3 +15,21 @@ const listado = [
     imagen_src: "https://as1.ftcdn.net/v2/jpg/04/85/33/58/1000_F_485335817_AZCIC04XDrecAIxrLZ0YBJFtgzXUT3xC.jpg",
   },
 ];
+
+let main = document.getElementById("main");
+
+main.setAttribute('class', 'container d-flex flex-column flex-md-row gap-3');
+
+listado.map((item) => {
+  main.insertAdjacentHTML(
+    `beforeend`,
+    `<div class="card w-100">
+        <img src="${item.imagen_src}" class="card-img-top" alt="imagen">
+        <div class="card-body">
+            <h5 class="card-title">${item.titulo}</h5>
+            <p class="card-text">${item.descripcion}</p>
+        </div>
+    </div>    
+    `
+  );
+});
